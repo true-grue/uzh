@@ -1,12 +1,14 @@
 # Uzh
 
+![uzh](uzh.jpg)
+
 Uzh is a tiny compiler for FPGA soft processor Zmey (32-bit stack-based architecture with multithreading support).
 
 Uzh language is a statically compiled subset of Python.
 
 Uzh is based on [raddsl](https://github.com/true-grue/raddsl) toolset.
 
-Simple example.
+Simple example: controlling of WS2812B-based LED strip.
 
 ```python
 # a function with host decorator is for compile-time execution
@@ -34,3 +36,5 @@ def main():
     delay(10000)
 
 ```
+
+![board](board.jpg)
