@@ -1,8 +1,10 @@
 import math
 
+# constants (read-only)
 D1 = 10
 D2 = 25
 
+# "WS_PORT" will be placed in the data memory
 WS_PORT = [0]
 
 def delay(n):
@@ -43,17 +45,20 @@ def ws_send_buf(buf, size):
     buf += 3
     size -= 1
 
+# a host function is for compile-time execution
+# you may use all Python features here
 @host
 def make_sine_table(size):
-  table = []
-  for i in range(size):
-    table.append(127 + 127 * math.sin(2 * math.pi * i / size))
-  return table
+  return [127 * math.sin(2 * math.pi * i / size) + 127 for i in range(size)]
 
+# sine_table will be placed in the data memory
 sine_table = make_sine_table(32)
 
+# buf will be placed in the data memory
 buf = [0, 0, 0] * 54
 
+# main function will be placed in the code memory
+# and will be called on startup
 def main():
   phase = 0
   ws_set_port(17004)
