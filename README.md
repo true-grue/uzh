@@ -1,6 +1,6 @@
 # Uzh
 
-![uzh](uzh.jpg)
+![uzh](uzh.jpg | width=100)
 
 Uzh is a tiny compiler for FPGA soft processor Zmey (32-bit stack-based architecture with multithreading support).
 
