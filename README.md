@@ -1,6 +1,6 @@
 # Uzh
 
-<img src="uzh.jpg" width="100">
+<img src="doc/uzh.jpg" width="100">
 
 Uzh is a tiny compiler for FPGA soft processor Zmey (32-bit stack-based architecture with multithreading support).
 
@@ -34,7 +34,6 @@ def main():
     ws_send_buf(buf, len(buf))
     phase += 1
     delay(10000)
-
 ```
 
-![board](board.jpg)
+![board](doc/board.jpg)
